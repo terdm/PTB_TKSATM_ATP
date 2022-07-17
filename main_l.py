@@ -75,7 +75,7 @@ async def location(update: Update, context: ContextTypes.DEFAULT_TYPE):
         message = update.message
     current_pos = (message.location.latitude, message.location.longitude)
     print(current_pos)
-    conn = cx_Oracle.connect(dsn="stockaz_high", encoding="UTF-8",user = "PTB", password = "Dimon1982ter#")
+    conn = cx_Oracle.connect(dsn="stockaz_high", encoding="UTF-8",user = "PTB", password = "PWD")
     c = conn.cursor()
     strr = "insert into locations values('"+str(current_pos)+"')"
     print(strr)
